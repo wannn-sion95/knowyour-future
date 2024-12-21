@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://i.pinimg.com/236x/74/87/ea/7487ead9c5591ddf19d25c5751198ea0.jpg" rel="stylesheet">
+    
+  </head>
+  <body>
+    <h2>Nama dan Umur Pasangan</h2>
+    <form>
+      <input id="t1" placeholder="Masukkan nama Laki-laki" />
+      <br />
+      <input id="t2" placeholder="Masukkan umur Laki-laki" />
+      <br />
+      <input id="t3" placeholder="Masukkan nama Wanita" />
+      <br />
+      <input id="t4" placeholder="Masukkan umur Wanita" />
+      <br />
+      <input
+        type="button"
+        onclick="perasaanCinta(document.getElementById('t1').value, document.getElementById('t3').value, document.getElementById('t2').value, document.getElementById('t4').value)"
+        value="Cocokkan"
+      />
+    </form>
+    <script>
+      function perasaanCinta(jodohPria, jodohWanita, umurPria, umurWanita) {
+        if (
+          jodohPria == "" ||
+          umurPria == "" ||
+          jodohWanita == "" ||
+          umurWanita == ""
+        )
+          return alert("Data tidak boleh kosong");
+        document.write(
+          jodohPria +
+            " " +
+            umurPria +
+            " tahun" +
+            " & " +
+            jodohWanita +
+            " " +
+            umurWanita +
+            " tahun"
+        );
+      }
+    </script>
+  </body>
+</html>
